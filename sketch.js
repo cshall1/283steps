@@ -14,9 +14,15 @@ let myMat;
 // Mat to store the grayscale converted camera frame
 let myMatGrayscale;
 let img1;
+let img2;
+let img3;
+let img4;
 
 function preload() {
-  img1 = loadImage('meditation2.jpg');
+  img1 = loadImage('meditation1.jpg');
+  img2 = loadImage('meditation2.jpg');
+  img3 = loadImage('meditation3.jpg');
+  img4 = loadImage('meditation4.jpg');
 }
 
 function setup() {
@@ -52,11 +58,18 @@ function draw() {
     // draw brightest point
     circle(brightestPoint.x, brightestPoint.y, 30);
 
-    if(brightestPoint.x < 100 && brightestPoint.y < 100) {
+    if(brightestPoint.x < width/2 && brightestPoint.y < height/2) {
       print("LK1");
       image(img1, 0, 0, width,height);
-    }
-
+    } else if(brightestPoint.x > width/2 && brightestPoint.y < height/2) {
+      print("LK2");
+      image(img2, 0, 0, width,height);
+    } else if (brightestPoint.x < width/2 && brightestPoint.y > height/2) {
+      print("LK3");
+      image(img3, 0, 0, width,height);
+    } else if (brightestPoint.x > width/2 && brightestPoint.y > height/2) {
+      print("LK4");
+      image(img4, 0, 0, width,height);
   } else {
     background(0);
     //image(myCapture, 0, 0);
