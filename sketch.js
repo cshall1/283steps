@@ -46,7 +46,7 @@ function draw() {
     // convert Mat to grayscale
     p5.cv.copyGray(myMat, myMatGrayscale);
     // display Mat
-    p5.cv.drawMat(myMatGrayscale, 0, 0);
+    //p5.cv.drawMat(myMatGrayscale, 0, 0);
     // get brightnest point
     let brightestPoint = p5.cv.findMinLocation(myMatGrayscale);
     // draw brightest point
