@@ -13,6 +13,11 @@ let myCVCapture;
 let myMat;
 // Mat to store the grayscale converted camera frame
 let myMatGrayscale;
+let img1;
+
+function preload() {
+  img1 = loadImage('meditation2.jpg');
+}
 
 function setup() {
   createCanvas(640, 480);
@@ -48,9 +53,11 @@ function draw() {
 
     if(brightestPoint.x < 100 && brightestPoint.y < 100) {
       print("LK1");
+      image(img1, 0, 0, width,height);
     }
 
   } else {
-    image(myCapture, 0, 0);
+    background(0);
+    //image(myCapture, 0, 0);
   }
 }
