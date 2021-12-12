@@ -45,7 +45,6 @@ function onOpenCVComplete() {
 }
 
 function draw() {
-  background(0);
   if (p5.cv.isReady) {
     // read from CV Capture into myMat
     myCVCapture.read(myMat);
@@ -70,8 +69,8 @@ function draw() {
     } else if (brightestPoint.x > width/2 && brightestPoint.y > height/2) {
       print("LK4");
       image(img4, 0, 0, width,height);
+    }
   } else {
-    background(0);
     image(myCapture, 0, 0);
   }
 }
