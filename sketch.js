@@ -18,11 +18,20 @@ let img2;
 let img3;
 let img4;
 
+let sound1;
+let sound2;
+let sound3;
+let sound4;
+
 function preload() {
   img1 = loadImage('meditation1.jpg');
   img2 = loadImage('meditation2.jpg');
   img3 = loadImage('meditation3.jpg');
   img4 = loadImage('meditation4.jpg');
+  sound1 = loadSound('med1.mp3');
+  sound2 = loadSound('med2.mp3');
+  sound3 = loadSound('med3.mp3');
+  sound4 = loadSound('med4.mp3');
 }
 
 function setup() {
@@ -33,6 +42,10 @@ function setup() {
   myCapture.hide();
   // wait for OpenCV to init
   p5.cv.onComplete = onOpenCVComplete;
+  sound1.playMode('untilDone');
+  sound2.playMode('untilDone');
+  sound3.playMode('untilDone');
+  sound4.playMode('untilDone');
 }
 
 function onOpenCVComplete() {
@@ -61,15 +74,19 @@ function draw() {
     if(brightestPoint.x < 320 && brightestPoint.y < 240) {
       print("LK1");
       image(img1, 0, 0, 1920,height);
+      sound1.play;
     } else if(brightestPoint.x >= 320 && brightestPoint.y < 240) {
       print("LK2");
       image(img2, 1921, 0, 1920,height);
+      sound2.play;
     } else if (brightestPoint.x < 320 && brightestPoint.y >= 240) {
       print("LK3");
       image(img3, 0, 0, 1920,height);
+      sound3.play;
     } else if (brightestPoint.x >= 320 && brightestPoint.y >= 240) {
       print("LK4");
       image(img4, 1921, 0, 1920,height);
+      sound4.play;
     }
   } else {
     image(myCapture, 0, 0);
