@@ -26,7 +26,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(1920, 2160);
   // setup p5 capture
   myCapture = createCapture(VIDEO);
   myCapture.size(640, 480);
@@ -59,16 +59,16 @@ function draw() {
 
     if(brightestPoint.x < width/2 && brightestPoint.y < height/2) {
       print("LK1");
-      image(img1, 0, 0, width,height);
+      image(img1, 0, 0, 1920,height);
     } else if(brightestPoint.x > width/2 && brightestPoint.y < height/2) {
       print("LK2");
-      image(img2, 0, 0, width,height);
+      image(img2, 1921, 0, 1920,height);
     } else if (brightestPoint.x < width/2 && brightestPoint.y > height/2) {
       print("LK3");
-      image(img3, 0, 0, width,height);
+      image(img3, 0, 0, 1920,height);
     } else if (brightestPoint.x > width/2 && brightestPoint.y > height/2) {
       print("LK4");
-      image(img4, 0, 0, width,height);
+      image(img4, 1921, 0, 1920,height);
     }
   } else {
     image(myCapture, 0, 0);
