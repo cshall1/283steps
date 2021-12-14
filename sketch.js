@@ -45,6 +45,7 @@ function onOpenCVComplete() {
 }
 
 function draw() {
+  background(0);
   if (p5.cv.isReady) {
     // read from CV Capture into myMat
     myCVCapture.read(myMat);
