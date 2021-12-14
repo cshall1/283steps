@@ -26,7 +26,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1920, 2160);
+  createCanvas(3840, 1080);
   // setup p5 capture
   myCapture = createCapture(VIDEO);
   myCapture.size(640, 480);
