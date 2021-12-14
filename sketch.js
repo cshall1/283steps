@@ -58,16 +58,16 @@ function draw() {
     // draw brightest point
     circle(brightestPoint.x, brightestPoint.y, 30);
 
-    if(brightestPoint.x < width/2 && brightestPoint.y < height/2) {
+    if(brightestPoint.x < 320 && brightestPoint.y < 240) {
       print("LK1");
       image(img1, 0, 0, 1920,height);
-    } else if(brightestPoint.x > width/2 && brightestPoint.y < height/2) {
+    } else if(brightestPoint.x >= 320 && brightestPoint.y < 240) {
       print("LK2");
       image(img2, 1921, 0, 1920,height);
-    } else if (brightestPoint.x < width/2 && brightestPoint.y > height/2) {
+    } else if (brightestPoint.x < 320 && brightestPoint.y >= 240) {
       print("LK3");
       image(img3, 0, 0, 1920,height);
-    } else if (brightestPoint.x > width/2 && brightestPoint.y > height/2) {
+    } else if (brightestPoint.x >= 320 && brightestPoint.y >= 240) {
       print("LK4");
       image(img4, 1921, 0, 1920,height);
     }
