@@ -28,10 +28,10 @@ function preload() {
   img2 = loadImage('meditation2.jpg');
   img3 = loadImage('meditation3.jpg');
   img4 = loadImage('meditation4.jpg');
-  sound1 = loadSound('med1.mp3');
-  sound2 = loadSound('med2.mp3');
-  sound3 = loadSound('med3.mp3');
-  sound4 = loadSound('med4.mp3');
+  sound1 = loadSound('voice1.mp3');
+  sound2 = loadSound('voice2.mp3');
+  sound3 = loadSound('voice3.mp3');
+  sound4 = loadSound('voice4.mp3');
 }
 
 function setup() {
