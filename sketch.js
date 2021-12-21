@@ -155,7 +155,7 @@ function queueVoiceImagesAndPlayVoiceLoop() {
 }
 
 function setup() {
-  createCanvas(3840, 1080);
+  createCanvas(820, 640);
   // setup p5 capture
   myCapture = createCapture(VIDEO);
   myCapture.size(820, 640);
