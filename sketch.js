@@ -215,6 +215,16 @@ function draw() {
     darkestPoint = p5.cv.findMinLocation(myMatGrayscale);
     // draw brightest point
     //circle(brightestPoint.x, brightestPoint.y, 30);
+  
+  for (i = 0; i < zoneArray.length; i+=1) {
+        zone = zoneArray[i];
+
+        if(isDarkestPointInZone(zone) && zone.isActive == false) {
+            activateZone(zone);
+        } else if(!isDarkestPointInZone(zone) && zone.isActive == true) {
+            deactivateZone(zone);
+        }
+    }
     
     if(darkestPoint.x < 320 && darkestPoint.y < 240) {
       image(img1, 0, 0, 1920,height);
@@ -228,19 +238,6 @@ function draw() {
     if (darkestPoint.x >= 320 && darkestPoint.y >= 240) {
       image(img4, 1921, 0, 1920,height);
     }
-   else {
-    image(myCapture, 0, 0);
-  }
-
-  
-  for (i = 0; i < zoneArray.length; i+=1) {
-        zone = zoneArray[i];
-
-        if(isDarkestPointInZone(zone) && zone.isActive == false) {
-            activateZone(zone);
-        } else if(!isDarkestPointInZone(zone) && zone.isActive == true) {
-            deactivateZone(zone);
-        }
-    }
+   
   }
 }
