@@ -35,8 +35,8 @@ let zoneTwo = {
     box: {
     x: 0,
     y: 0,
-    width: 770,
-    height: 590,
+    width: 590,
+    height: 430,
     },
     isActive: false,
     name: 'LK2',
@@ -46,7 +46,7 @@ let zoneThree = {
     box: {
     x: 0,
     y: 0,
-    width: 770,
+    width: 590,
     height: 50,
     },
     isActive: false,
@@ -58,7 +58,7 @@ let zoneFour = {
     x: 0,
     y: 0,
     width: 50,
-    height: 590,
+    height: 430,
     },
     isActive: false,
     name: 'LK4',
