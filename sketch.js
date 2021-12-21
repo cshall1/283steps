@@ -108,18 +108,22 @@ function activateZone(zone) {
     
     if(zone == zoneOne) {
         playRandomSound(bellSounds, 0.1);
+        image(img1, 0, 0, 1920,height);
     }
     
     if(zone == zoneTwo) {
         playRandomSound(singingSounds, 0.1);
+        image(img2, 1921, 0, 1920,height);
     }
     
     if(zone == zoneThree) {
         playRandomSound(dingSounds, 0.8);
+        image(img3, 0, 0, 1920,height);
     }
     
     if(zone == zoneFour) {
         playRandomSound(bassSounds, 0.5);
+        image(img4, 1921, 0, 1920,height);
     }
     
     print(zone.name, " was just activated");
@@ -162,6 +166,10 @@ function setup() {
   //sound2.playMode('untilDone');
   //sound3.playMode('untilDone');
   //sound4.playMode('untilDone');
+    img1 = loadImage('meditation1.jpg');
+    img2 = loadImage('meditation2.jpg');
+    img3 = loadImage('meditation3.jpg');
+    img4 = loadImage('meditation4.jpg');
     
     bellSounds.push(loadSound("bell_C.wav"));
     bellSounds.push(loadSound("bell_FS.wav"));
