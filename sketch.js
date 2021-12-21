@@ -197,7 +197,7 @@ function onOpenCVComplete() {
   myMat = p5.cv.getRGBAMat(640, 480);
   // create a CV mat for color to grayscale conversion
   myMatGrayscale = new cv.Mat();
-}//
+}
 
 let i;
 let zone;
