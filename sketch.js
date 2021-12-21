@@ -47,7 +47,7 @@ let zoneThree = {
     x: 0,
     y: 0,
     width: 770,
-    height: 5,
+    height: 50,
     },
     isActive: false,
     name: 'LK3',
@@ -108,22 +108,22 @@ function activateZone(zone) {
     
     if(zone == zoneOne) {
         playRandomSound(bellSounds, 0.1);
-        image(img1, 0, 0, 1920,height);
+        //image(img1, 0, 0, 1920,height);
     }
     
     if(zone == zoneTwo) {
         playRandomSound(singingSounds, 0.1);
-        image(img2, 1921, 0, 1920,height);
+        //image(img2, 1921, 0, 1920,height);
     }
     
     if(zone == zoneThree) {
         playRandomSound(dingSounds, 0.8);
-        image(img3, 0, 0, 1920,height);
+        //image(img3, 0, 0, 1920,height);
     }
     
     if(zone == zoneFour) {
         playRandomSound(bassSounds, 0.5);
-        image(img4, 1921, 0, 1920,height);
+        //image(img4, 1921, 0, 1920,height);
     }
     
     print(zone.name, " was just activated");
@@ -216,29 +216,21 @@ function draw() {
     // draw brightest point
     //circle(brightestPoint.x, brightestPoint.y, 30);
       
-      /*
+      
 
-    if(brightestPoint.x < 320 && brightestPoint.y < 240) {
-      print("LK1");
+    if(brightestPoint.x < 50 && brightestPoint.y < 50) {
       image(img1, 0, 0, 1920,height);
-      sound1.play;
-    } else if(brightestPoint.x >= 320 && brightestPoint.y < 240) {
-      print("LK2");
+    } else if(brightestPoint.x > 770 && brightestPoint.y > 590) {
       image(img2, 1921, 0, 1920,height);
-      sound2.play;
-    } else if (brightestPoint.x < 320 && brightestPoint.y >= 240) {
-      print("LK3");
+    } else if (brightestPoint.x > 770 && brightestPoint.y < 50) {
       image(img3, 0, 0, 1920,height);
-      sound3.play;
-    } else if (brightestPoint.x >= 320 && brightestPoint.y >= 240) {
-      print("LK4");
+    } else if (brightestPoint.x < 50 && brightestPoint.y > 590) {
       image(img4, 1921, 0, 1920,height);
-      sound4.play;
     }
   } else {
     image(myCapture, 0, 0);
   }
-  */
+  
       for (i = 0; i < zoneArray.length; i+=1) {
             zone = zoneArray[i];
 
