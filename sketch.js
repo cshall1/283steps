@@ -142,15 +142,15 @@ function isDarkestPointInZone(zone) {
     }
 }
 
-function queueVoiceLoopAndPlayVoiceImages() {
+function queueVoiceLoopAndPlayVoiceFaces() {
     console.log("starting voice images");
-    meditationVoiceImages.onended(queueVoiceImagesAndPlayVoiceLoop);
-    meditationVoiceImages.play();
+    meditationVoiceFaces.onended(queueVoiceFacesAndPlayVoiceLoop);
+    meditationVoiceFaces.play();
 }
 
-function queueVoiceImagesAndPlayVoiceLoop() {
+function queueVoiceFacesAndPlayVoiceLoop() {
     console.log("starting voice loop");
-    meditationVoiceLoop.onended(queueVoiceLoopAndPlayVoiceImages);
+    meditationVoiceLoop.onended(queueVoiceLoopAndPlayVoiceFaces);
     meditationVoiceLoop.play();
 }
 
@@ -186,8 +186,8 @@ function setup() {
     
     bassSounds.push(loadSound("bassInOut.wav"));
     
-    meditationVoiceLoop = loadSound("voice_loop.wav", queueVoiceImagesAndPlayVoiceLoop);
-    meditationVoiceImages = loadSound("voice_with_images.wav");
+    meditationVoiceLoop = loadSound("voice_loop.wav", queueVoiceFacesAndPlayVoiceLoop);
+    meditationVoiceFaces = loadSound("voice_with_images.wav");
 }
 
 function onOpenCVComplete() {
