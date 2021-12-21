@@ -218,13 +218,13 @@ function draw() {
       
       
 
-    if(brightestPoint.x < 50 && brightestPoint.y < 50) {
+    if(darkestPoint.x < 50 && darkestPoint.y < 50) {
       image(img1, 0, 0, 1920,height);
-    } else if(brightestPoint.x > 770 && brightestPoint.y > 590) {
+    } else if(darkestPoint.x > 770 && darkestPoint.y > 590) {
       image(img2, 1921, 0, 1920,height);
-    } else if (brightestPoint.x > 770 && brightestPoint.y < 50) {
+    } else if (darkestPoint.x > 770 && darkestPoint.y < 50) {
       image(img3, 0, 0, 1920,height);
-    } else if (brightestPoint.x < 50 && brightestPoint.y > 590) {
+    } else if (darkestPoint.x < 50 && darkestPoint.y > 590) {
       image(img4, 1921, 0, 1920,height);
     }
    else {
