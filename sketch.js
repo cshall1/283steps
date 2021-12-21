@@ -227,9 +227,10 @@ function draw() {
     } else if (brightestPoint.x < 50 && brightestPoint.y > 590) {
       image(img4, 1921, 0, 1920,height);
     }
-  } else {
+   else {
     image(myCapture, 0, 0);
   }
+
   
       for (i = 0; i < zoneArray.length; i+=1) {
             zone = zoneArray[i];
