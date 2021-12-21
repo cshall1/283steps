@@ -143,7 +143,7 @@ function isDarkestPointInZone(zone) {
 }
 
 function queueVoiceLoopAndPlayVoiceFaces() {
-    console.log("starting voice images");
+    console.log("starting voice faces");
     meditationVoiceFaces.onended(queueVoiceFacesAndPlayVoiceLoop);
     meditationVoiceFaces.play();
 }
