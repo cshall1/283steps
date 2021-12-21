@@ -1,10 +1,3 @@
-/**
- * Based on the Processing Video Brightness Tracking example
- * by Golan Levin.
- *
- * Tracks the brightest pixel in a live video signal.
- */
-
 // p5.js Video capture
 let myCapture;
 // OpenCV capture helper
@@ -75,24 +68,6 @@ let bassSounds = [];
 let singingSounds = [];
 let meditationVoiceLoop;
 
-//let sound1;
-//let sound2;
-//let sound3;
-//let sound4;
-
-/*
-function preload() {
-  img1 = loadImage('meditation1.jpg');
-  img2 = loadImage('meditation2.jpg');
-  img3 = loadImage('meditation3.jpg');
-  img4 = loadImage('meditation4.jpg');
-  sound1 = loadSound('voice1.mp3');
-  sound2 = loadSound('voice2.mp3');
-  sound3 = loadSound('voice3.mp3');
-  sound4 = loadSound('voice4.mp3');
-}
-*/
-
 function playRandomSound(sounds, volume) {
     randSound = random(sounds);
     randSound.setVolume(volume);
@@ -155,17 +130,14 @@ function queueVoiceFacesAndPlayVoiceLoop() {
 }
 
 function setup() {
-  createCanvas(3840, 1080);
-  // setup p5 capture
-  myCapture = createCapture(VIDEO);
-  myCapture.size(640, 480);
-  myCapture.hide();
-  // wait for OpenCV to init
-  p5.cv.onComplete = onOpenCVComplete;
-  //sound1.playMode('untilDone');
-  //sound2.playMode('untilDone');
-  //sound3.playMode('untilDone');
-  //sound4.playMode('untilDone');
+    createCanvas(3840, 1080);
+    // setup p5 capture
+    myCapture = createCapture(VIDEO);
+    myCapture.size(640, 480);
+    myCapture.hide();
+    // wait for OpenCV to init
+    p5.cv.onComplete = onOpenCVComplete;
+
     img1 = loadImage('meditation1.jpg');
     img2 = loadImage('meditation2.jpg');
     img3 = loadImage('meditation3.jpg');
@@ -191,20 +163,20 @@ function setup() {
 }
 
 function onOpenCVComplete() {
-  // create a CV capture helper
-  myCVCapture = p5.cv.getCvVideoCapture(myCapture);
-  // create a CV Mat to read new color frames into
-  myMat = p5.cv.getRGBAMat(640, 480);
-  // create a CV mat for color to grayscale conversion
-  myMatGrayscale = new cv.Mat();
-}//
+    // create a CV capture helper
+    myCVCapture = p5.cv.getCvVideoCapture(myCapture);
+    // create a CV Mat to read new color frames into
+    myMat = p5.cv.getRGBAMat(640, 480);
+    // create a CV mat for color to grayscale conversion
+    myMatGrayscale = new cv.Mat();
+}
 
 let i;
 let zone;
 
 function draw() {
-  background(0);
-  if (p5.cv.isReady) {
+    background(0);
+    if (p5.cv.isReady) {
     // read from CV Capture into myMat
     myCVCapture.read(myMat);
     // convert Mat to grayscale
@@ -216,7 +188,7 @@ function draw() {
     // draw brightest point
     //circle(brightestPoint.x, brightestPoint.y, 30);
   
-  for (i = 0; i < zoneArray.length; i+=1) {
+    for (i = 0; i < zoneArray.length; i+=1) {
         zone = zoneArray[i];
 
         if(isDarkestPointInZone(zone) && zone.isActive == false) {
@@ -238,6 +210,5 @@ function draw() {
     if (darkestPoint.x >= 320 && darkestPoint.y >= 240) {
       image(img4, 1921, 0, 1920,height);
     }
-   
   }
 }
