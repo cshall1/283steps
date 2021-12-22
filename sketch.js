@@ -11,6 +11,11 @@ let img2;
 let img3;
 let img4;
 
+let face1;
+let face2;
+let face3;
+let face4;
+
 let darkestPoint;
 
 let zoneOne = {
@@ -121,6 +126,10 @@ function queueVoiceLoopAndPlayVoiceFaces() {
     console.log("starting voice faces");
     meditationVoiceFaces.onended(queueVoiceFacesAndPlayVoiceLoop);
     meditationVoiceFaces.play();
+    image(face1, 300, 0, 1024, 1024);
+    image(face2, 2220, 0, 1024, 1024);
+    image(face3, 4141, 0, 1024, 1024;
+    image(face4, 6061, 0, 1024, 1024);    
 }
 
 function queueVoiceFacesAndPlayVoiceLoop() {
@@ -142,6 +151,11 @@ function setup() {
     img2 = loadImage('meditation2.jpg');
     img3 = loadImage('meditation3.jpg');
     img4 = loadImage('meditation4.jpg');
+    
+    face1 = loadImage('faceimage.jpg');
+    face2 = loadImage('faceimage2.jpg');
+    face3 = loadImage('faceimage3.jpg');
+    face4 = loadImage('faceimage4.jpg');
     
     bellSounds.push(loadSound("bell_C.wav"));
     bellSounds.push(loadSound("bell_FS.wav"));
@@ -205,10 +219,10 @@ function draw() {
       image(img2, 1921, 0, 1920,height);
     } 
     if (darkestPoint.x < 320 && darkestPoint.y >= 240) {
-      image(img3, 3840, 0, 1920,height);
+      image(img3, 3841, 0, 1920,height);
     } 
     if (darkestPoint.x >= 320 && darkestPoint.y >= 240) {
-      image(img4, 5760, 0, 1920,height);
+      image(img4, 5761, 0, 1920,height);
     }
   }
 }
