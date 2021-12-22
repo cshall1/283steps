@@ -207,7 +207,7 @@ function draw() {
 
         if(isDarkestPointInZone(zone) && zone.isActive == false) {
             activateZone(zone);
-        } else if(!isDarkestPointInZone(zone) && zone.isActive == true) 
+        } else if(!isDarkestPointInZone(zone) && zone.isActive == true) { 
             deactivateZone(zone);
         }
     }
