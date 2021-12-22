@@ -128,7 +128,7 @@ function queueVoiceLoopAndPlayVoiceFaces() {
     meditationVoiceFaces.play();
     image(face1, 300, 0, 1024, 1024);
     image(face2, 2220, 0, 1024, 1024);
-    image(face3, 4141, 0, 1024, 1024;
+    image(face3, 4141, 0, 1024, 1024);
     image(face4, 6061, 0, 1024, 1024);    
 }
 
