@@ -130,10 +130,10 @@ function queueVoiceFacesAndPlayVoiceLoop() {
 }
 
 function setup() {
-    createCanvas(3840, 1080);
+    createCanvas(7680, 1080);
     // setup p5 capture
     myCapture = createCapture(VIDEO);
-    myCapture.size(1280, 720);
+    myCapture.size(640, 480);
     myCapture.hide();
     // wait for OpenCV to init
     p5.cv.onComplete = onOpenCVComplete;
@@ -166,7 +166,7 @@ function onOpenCVComplete() {
     // create a CV capture helper
     myCVCapture = p5.cv.getCvVideoCapture(myCapture);
     // create a CV Mat to read new color frames into
-    myMat = p5.cv.getRGBAMat(1280, 720);
+    myMat = p5.cv.getRGBAMat(640, 480);
     // create a CV mat for color to grayscale conversion
     myMatGrayscale = new cv.Mat();
 }
@@ -193,22 +193,22 @@ function draw() {
 
         if(isDarkestPointInZone(zone) && zone.isActive == false) {
             activateZone(zone);
-        } else if(!isDarkestPointInZone(zone) && zone.isActive == true) {
+        } else if(!isDarkestPointInZone(zone) && zone.isActive == true) 
             deactivateZone(zone);
         }
     }
     
-    if(darkestPoint.x < 640 && darkestPoint.y < 360) {
+    if(darkestPoint.x < 320 && darkestPoint.y < 240) {
       image(img1, 0, 0, 1920,height);
     } 
-    if(darkestPoint.x >= 640 && darkestPoint.y < 360) {
+    if(darkestPoint.x >= 320 && darkestPoint.y < 240) {
       image(img2, 1921, 0, 1920,height);
     } 
-    if (darkestPoint.x < 640 && darkestPoint.y >= 360) {
-      image(img3, 0, 0, 1920,height);
+    if (darkestPoint.x < 320 && darkestPoint.y >= 240) {
+      image(img3, 3840, 0, 1920,height);
     } 
-    if (darkestPoint.x >= 640 && darkestPoint.y >= 360) {
-      image(img4, 1921, 0, 1920,height);
+    if (darkestPoint.x >= 320 && darkestPoint.y >= 240) {
+      image(img4, 5760, 0, 1920,height);
     }
   }
 }
