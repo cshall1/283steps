@@ -204,11 +204,11 @@ function draw() {
     if(darkestPoint.x >= 640 && darkestPoint.y < 360) {
       image(img2, 1921, 0, 1920,height);
     } 
-//     if (darkestPoint.x < 640 && darkestPoint.y >= 360) {
-//       image(img3, 0, 0, 1920,height);
-//     } 
-//     if (darkestPoint.x >= 640 && darkestPoint.y >= 360) {
-//       image(img4, 1921, 0, 1920,height);
-//     }
+    if (darkestPoint.x < 640 && darkestPoint.y >= 360) {
+      image(img3, 0, 0, 1920,height);
+    } 
+    if (darkestPoint.x >= 640 && darkestPoint.y >= 360) {
+      image(img4, 1921, 0, 1920,height);
+    }
   }
 }
